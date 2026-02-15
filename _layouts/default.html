@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | UK Barcode of Life</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --ukbol-primary: #1a365d;
+      --ukbol-primary-mid: #2d5a87;
+      --ukbol-accent: #5ba4c9;
+      --ukbol-text: #343a40;
+      --ukbol-bg: #f5f7fa;
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--ukbol-bg);
+      color: var(--ukbol-text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main { flex: 1; }
+    .content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .content-wrapper h1 { color: var(--ukbol-primary); font-weight: 700; margin-bottom: 1.5rem; }
+    .content-wrapper h2 { color: var(--ukbol-primary); font-weight: 600; margin-top: 2rem; margin-bottom: 1rem; }
+    .content-wrapper h3 { color: var(--ukbol-primary-mid); font-weight: 600; margin-top: 1.5rem; }
+    .content-wrapper p { line-height: 1.7; margin-bottom: 1rem; }
+    .content-wrapper a { color: var(--ukbol-accent); }
+    .content-wrapper a:hover { color: var(--ukbol-primary); }
+    .content-wrapper table { width: 100%; margin: 1.5rem 0; }
+    .content-wrapper table th { background: var(--ukbol-primary); color: #fff; padding: .5rem .75rem; font-weight: 600; font-size: .9rem; }
+    .content-wrapper table td { padding: .5rem .75rem; border-bottom: 1px solid #e9ecef; font-size: .9rem; }
+    .content-wrapper table tr:hover { background: #f8f9fa; }
+    .page-hero {
+      background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+      color: #fff;
+      padding: 3rem 0;
+    }
+    .page-hero h1 { color: #fff; }
+  </style>
+</head>
+<body>
+  {% include nav.html %}
+  <main>
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

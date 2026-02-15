@@ -1,0 +1,17 @@
+title: UK Barcode of Life
+description: UK Barcode of Life - DNA Barcoding Initiative
+baseurl: ""
+url: "https://ukbol.org"
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - planning/
+
+permalink: /:title/
