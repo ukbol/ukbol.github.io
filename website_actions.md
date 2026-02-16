@@ -1,7 +1,7 @@
 # UKBOL Website: Implementation Plan
 
-> **Last updated:** 2026-02-15
-> **Status:** Planning complete — ready for Phase 1 implementation
+> **Last updated:** 2026-02-16
+> **Status:** Phases 1–2 complete — ready for Phase 3 (local testing)
 
 ---
 
@@ -9,8 +9,8 @@
 
 | Phase | Description | Status |
 |-------|-------------|--------|
-| 1 | Create website repo and Jekyll infrastructure | `[ ] NOT STARTED` |
-| 2 | Create content pages | `[ ] NOT STARTED` |
+| 1 | Create website repo and Jekyll infrastructure | `[x] COMPLETE` |
+| 2 | Create content pages | `[x] COMPLETE` |
 | 3 | Local testing | `[ ] NOT STARTED` |
 | 4 | Deploy to GitHub Pages | `[ ] NOT STARTED` |
 | 5 | Custom domain setup (ukbol.org) | `[ ] NOT STARTED` |
@@ -22,7 +22,9 @@
 | Date | Session | Work Done |
 |------|---------|-----------|
 | 2026-02-15 | 1 | Created initial plan; reviewed against codebase; rewrote for two-repo approach |
-| | | |
+| 2026-02-16 | 2 | **Phase 1 complete:** Created `_config.yml`, `_layouts/` (default, page), `_includes/` (nav, footer), `Gemfile`. Added SVG placeholder logos initially. |
+| 2026-02-16 | 2 | **Phase 2 complete:** Created `index.md`, `about.md`, `projects.md`, `publications.md`, `404.md`, `robots.txt`, `CNAME`. All pages have placeholder content sections ready for text. |
+| 2026-02-16 | 2 | **Logo update:** Replaced SVG placeholders with real PNG logos (`ukbol-logo-clear.png`, `ukbol-text-logo-clear.png`, `ukbol-text-logo-white.png`). Navbar uses icon-only logo; footer uses logo+text version. Both use `brightness(0) invert(1)` CSS filter for white-on-dark appearance. |
 
 ---
 
@@ -77,8 +79,9 @@ ukbol.github.io/
 │   └── footer.html            # Shared footer
 ├── assets/
 │   └── images/
-│       ├── ukbol-logo.png     # UKBOL logo (colour)
-│       └── ukbol-logo-white.png   # White variant for dark nav
+│       ├── ukbol-logo-clear.png         # Circular icon logo (transparent bg)
+│       ├── ukbol-text-logo-clear.png    # Logo + text (transparent bg)
+│       └── ukbol-text-logo-white.png    # Logo + text (white bg)
 ├── index.md                   # Homepage
 ├── about.md                   # About UKBOL
 ├── projects.md                # Related projects
@@ -169,7 +172,7 @@ species/
 <nav class="navbar navbar-expand-lg navbar-dark" style="background:linear-gradient(135deg,#1a365d 0%,#2d5a87 100%);">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="{{ site.baseurl }}/">
-      <img src="{{ site.baseurl }}/assets/images/ukbol-logo-white.png" alt="UKBOL" height="40" class="me-2">
+      <img src="{{ site.baseurl }}/assets/images/ukbol-logo-clear.png" alt="UKBOL" height="40" class="me-2" style="filter:brightness(0) invert(1);">
       <span>UK Barcode of Life</span>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
@@ -195,7 +198,7 @@ The "Data Portal" link points to `/species/` which resolves to the portal served
 ```html
 <footer style="background:#1a365d;color:rgba(255,255,255,.8);padding:2rem 0;margin-top:3rem;">
   <div class="container text-center">
-    <img src="{{ site.baseurl }}/assets/images/ukbol-logo-white.png" alt="UKBOL" height="50" class="mb-3">
+    <img src="{{ site.baseurl }}/assets/images/ukbol-text-logo-clear.png" alt="UK Barcode of Life" height="60" class="mb-3" style="filter:brightness(0) invert(1);">
     <p class="mb-1">UK Barcode of Life (UKBOL)</p>
     <p class="small mb-2">
       Coordinated by the <a href="https://www.nhm.ac.uk" style="color:rgba(255,255,255,.9);">Natural History Museum, London</a>
@@ -346,7 +349,7 @@ title: UK Barcode of Life
         <p class="lead">Building comprehensive DNA barcode reference libraries for UK biodiversity</p>
       </div>
       <div class="col-lg-4 text-lg-end">
-        <img src="{{ site.baseurl }}/assets/images/ukbol-logo-white.png" alt="UKBOL" height="80">
+        <img src="{{ site.baseurl }}/assets/images/ukbol-logo-clear.png" alt="UKBOL" height="80" style="filter:brightness(0) invert(1);">
       </div>
     </div>
   </div>
@@ -453,22 +456,24 @@ Sitemap: https://ukbol.org/sitemap.xml
 **Repo:** `ukbol/ukbol.github.io`
 **Prerequisites:** GitHub org admin access to create the repo
 
-- [ ] **1.1** Create repo `ukbol/ukbol.github.io` on GitHub (public, no template, empty — or with a README)
-- [ ] **1.2** Clone the repo locally
-- [ ] **1.3** Create `_config.yml` with the configuration specified above
-- [ ] **1.4** Create `_layouts/default.html` with the default layout
-- [ ] **1.5** Create `_layouts/page.html` with the page layout
-- [ ] **1.6** Create `_includes/nav.html` with the navigation bar component
-- [ ] **1.7** Create `_includes/footer.html` with the footer component
-- [ ] **1.8** Create `assets/images/` and add logo files:
-  - `ukbol-logo.png` (colour version)
-  - `ukbol-logo-white.png` (white version for navbar/footer — create or source this)
-- [ ] **1.9** Create `Gemfile` for local development:
+- [x] **1.1** Create repo `ukbol/ukbol.github.io` on GitHub (public, no template, empty — or with a README)
+- [x] **1.2** Clone the repo locally
+- [x] **1.3** Create `_config.yml` with the configuration specified above
+- [x] **1.4** Create `_layouts/default.html` with the default layout
+- [x] **1.5** Create `_layouts/page.html` with the page layout
+- [x] **1.6** Create `_includes/nav.html` with the navigation bar component
+- [x] **1.7** Create `_includes/footer.html` with the footer component
+- [x] **1.8** Create `assets/images/` and add logo files:
+  - `ukbol-logo-clear.png` (circular icon, transparent background)
+  - `ukbol-text-logo-clear.png` (logo + text, transparent background)
+  - `ukbol-text-logo-white.png` (logo + text, white background)
+  - Navbar uses icon-only logo; footer uses logo+text. Both apply `filter:brightness(0) invert(1)` for white-on-dark rendering.
+- [x] **1.9** Create `Gemfile` for local development:
   ```ruby
   source "https://rubygems.org"
   gem "github-pages", group: :jekyll_plugins
   ```
-- [ ] **1.10** Commit and push: `"Initial Jekyll infrastructure"`
+- [x] **1.10** Commit and push: `"Initial Jekyll infrastructure"`
 
 **Completion check:** Repo exists on GitHub with layouts, includes, config, and logo assets.
 
@@ -479,14 +484,14 @@ Sitemap: https://ukbol.org/sitemap.xml
 **Repo:** `ukbol/ukbol.github.io`
 **Prerequisites:** Phase 1 complete; page content text available
 
-- [ ] **2.1** Create `index.md` using the homepage template above. Add homepage text.
-- [ ] **2.2** Create `about.md` using the about template. Add about text.
-- [ ] **2.3** Create `projects.md` using the projects template. Add projects text.
-- [ ] **2.4** Create `publications.md` using the publications template. Add publications text.
-- [ ] **2.5** Create `404.md` using the 404 template above.
-- [ ] **2.6** Create `robots.txt` at the repo root with the content above.
-- [ ] **2.7** Create `CNAME` containing a single line: `ukbol.org`
-- [ ] **2.8** Commit and push: `"Add content pages, 404, robots.txt, and CNAME"`
+- [x] **2.1** Create `index.md` using the homepage template above. *(Placeholder content sections ready for text)*
+- [x] **2.2** Create `about.md` using the about template. *(Placeholder content sections ready for text)*
+- [x] **2.3** Create `projects.md` using the projects template. *(Placeholder content sections ready for text)*
+- [x] **2.4** Create `publications.md` using the publications template. *(Placeholder content sections ready for text)*
+- [x] **2.5** Create `404.md` using the 404 template above.
+- [x] **2.6** Create `robots.txt` at the repo root with the content above.
+- [x] **2.7** Create `CNAME` containing a single line: `ukbol.org`
+- [x] **2.8** Commit and push: `"Add content pages, 404, robots.txt, and CNAME"`
 
 **Completion check:** All `.md` pages exist with content. CNAME file present.
 
@@ -735,6 +740,6 @@ This phase adds site-wide navigation to the portal pages so users can navigate b
 - **Jekyll** — built-in to GitHub Pages, no installation needed for deployment
 - **Ruby + Bundler** — needed only for local testing (Phase 3)
 - **Bootstrap 5.3.3** via CDN
-- **Logo files** — colour and white versions (must be sourced or created)
+- **Logo files** — ✓ added (`ukbol-logo-clear.png`, `ukbol-text-logo-clear.png`, `ukbol-text-logo-white.png`)
 - **Page content** — text for homepage, about, projects, and publications pages
 - **DNS access** — for configuring `ukbol.org` to point to GitHub Pages
