@@ -23,8 +23,8 @@
 |------|---------|-----------|
 | 2026-02-15 | 1 | Created initial plan; reviewed against codebase; rewrote for two-repo approach |
 | 2026-02-16 | 2 | **Phase 1 complete:** Created `_config.yml`, `_layouts/` (default, page), `_includes/` (nav, footer), `Gemfile`. Added SVG placeholder logos initially. |
-| 2026-02-16 | 2 | **Phase 2 complete:** Created `index.md`, `about.md`, `projects.md`, `publications.md`, `404.md`, `robots.txt`, `CNAME`. All pages have placeholder content sections ready for text. |
 | 2026-02-16 | 2 | **Logo update:** Replaced SVG placeholders with real PNG logos (`ukbol-logo-clear.png`, `ukbol-text-logo-clear.png`, `ukbol-text-logo-white.png`). Navbar uses icon-only logo; footer uses logo+text version. Both use `brightness(0) invert(1)` CSS filter for white-on-dark appearance. |
+| 2026-02-16 | 3 | **Phase 2 content pages:** Created `index.md`, `about.md`, `projects.md`, `publications.md`, `404.md`, `robots.txt`. All pages have placeholder content sections ready for text. Removed `CNAME` — deferred to Phase 5 so existing site at `ukbol.org` is not disrupted. |
 
 ---
 
@@ -490,10 +490,10 @@ Sitemap: https://ukbol.org/sitemap.xml
 - [x] **2.4** Create `publications.md` using the publications template. *(Placeholder content sections ready for text)*
 - [x] **2.5** Create `404.md` using the 404 template above.
 - [x] **2.6** Create `robots.txt` at the repo root with the content above.
-- [x] **2.7** Create `CNAME` containing a single line: `ukbol.org`
-- [x] **2.8** Commit and push: `"Add content pages, 404, robots.txt, and CNAME"`
+- [ ] **2.7** ~~Create `CNAME` containing a single line: `ukbol.org`~~ — **Deferred to Phase 5.** CNAME removed to avoid disrupting the existing site at `ukbol.org`. Will be re-added when ready to switch over.
+- [x] **2.8** Commit and push: `"Add content pages, 404, robots.txt"`
 
-**Completion check:** All `.md` pages exist with content. CNAME file present.
+**Completion check:** All `.md` pages exist with placeholder content. CNAME deferred to Phase 5.
 
 ---
 
