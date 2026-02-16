@@ -205,8 +205,9 @@ The "Data Portal" link points to `/species/` which resolves to the portal served
       | Part of <a href="https://ibol.org/" style="color:rgba(255,255,255,.9);">International Barcode of Life</a>
     </p>
     <p class="small mb-0" style="color:rgba(255,255,255,.5);">
-      Funded by <a href="https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs" style="color:rgba(255,255,255,.6);">DEFRA</a>
-      via the <a href="https://www.gov.uk/government/organisations/natural-england" style="color:rgba(255,255,255,.6);">Natural England</a> Centre of Excellence for DNA Methods
+      Funded by <a href="https://www.gov.uk/government/organisations/department-for-environment-food-rural-affairs" style="color:rgba(255,255,255,.6);">DEFRA</a>,
+      <a href="https://www.gov.uk/government/organisations/natural-england" style="color:rgba(255,255,255,.6);">Natural England</a> and the
+      <a href="https://www.nhm.ac.uk" style="color:rgba(255,255,255,.6);">Natural History Museum</a>
     </p>
   </div>
 </footer>
