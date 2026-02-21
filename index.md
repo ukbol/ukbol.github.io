@@ -18,7 +18,7 @@ title: UK Barcode of Life
 </div>
 
 <div class="container">
-  <div class="content-wrapper">
+  <div class="content-wrapper" markdown="1">
 
 UKBOL brings together UK government agencies, biodiversity institutions, and scientists to build a comprehensive DNA barcode reference library covering all ~75,000 eukaryote species found in the United Kingdom.
 
