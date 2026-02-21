@@ -5,20 +5,13 @@ title: UK Barcode of Life
 
 <div class="page-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8">
-        <h1>UK Barcode of Life</h1>
-        <p class="lead">Building comprehensive DNA barcode reference libraries for UK biodiversity</p>
-      </div>
-      <div class="col-lg-4 text-lg-end">
-        <img src="{{ site.baseurl }}/assets/images/ukbol-logo-clear.png" alt="UKBOL" height="120">
-      </div>
-    </div>
+    <h1>UK Barcode of Life</h1>
+    <p class="lead">Building comprehensive DNA barcode reference libraries for UK biodiversity</p>
   </div>
 </div>
 
 <div class="container">
-  <div class="content-wrapper">
+  <div class="content-wrapper" markdown="1">
 
 UKBOL brings together UK government agencies, biodiversity institutions, and scientists to build a comprehensive DNA barcode reference library covering all ~75,000 eukaryote species found in the United Kingdom.
 
